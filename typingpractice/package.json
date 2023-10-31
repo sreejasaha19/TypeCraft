@@ -1,0 +1,49 @@
+{
+  "name": "typingpractice",
+  "displayName": "Typing Practice",
+  "description": "Practice typing skills in Visual Studio Code",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "icon": "images/my-icon.png",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "typingpractice.helloWorld",
+      "title": "Hello World"
+    },
+    {
+      "command": "typingpractice.startTypingPractice",
+      "title": "Start Typing Practice"
+    },
+    {
+      "command": "typingpractice.getFeedback",
+      "title": "Get Feedback"
+    },
+    {
+      "command": "typingpractice.resetTypingContext",
+      "title": "Reset Typing Context"
+    }
+  ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
